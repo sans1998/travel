@@ -1,14 +1,47 @@
-/*.navbox{
-display: flex;
-justify-content: start;
-gap: 20px;
-padding: 10px 20px ;
+.favoritebox {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.navbox:hover{
-background-color:  #4b4a4a82;
-border-radius: 8px;
+
+.favoritebox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.title{
- font-size: 20px;
- color: #fff;
-} */
+
+.placebox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.date {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .favoritebox {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+}

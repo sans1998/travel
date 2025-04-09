@@ -1,9 +1,41 @@
-body {
-  background-color: black;
-}
-
 .container {
   display: flex;
-  gap: 10em;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .scheduleGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
 }
